@@ -26,6 +26,7 @@ public class Lightning : MonoBehaviour
         if(interval <= 0)
         {
             gameObject.GetComponent<Light>().enabled = true;
+            gameObject.GetComponent<AudioSource>().Play();
         }
 
         if (interval <= -0.5f)
@@ -41,8 +42,7 @@ public class Lightning : MonoBehaviour
         if(interval <= -0.75f)
         {
             gameObject.GetComponent<Light>().enabled = false;
-            interval = Random.Range(5, 15);
-
+            interval = Random.Range(15, 30);
         }
     }
 }
